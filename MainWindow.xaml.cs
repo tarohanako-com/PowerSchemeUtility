@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 
@@ -65,9 +66,16 @@ namespace PowerSchemeUtility
         /// </summary>
         /// <param name="sender">イベント発生元オブジェクト</param>
         /// <param name="e">イベント内容</param>
-        private void onRotateTimerTick(object sender, System.EventArgs e)
+        private async void onRotateTimerTick(object sender, System.EventArgs e)
         {
-            var result = this.ExecuteProcess(Path.Combine(this.ExecuteFilePath, MainWindow.CommandProcessName), "/GetActiveSchemeText");
+            Tuple<int, string> result = null;
+
+            await Task.Run(() =>
+            {
+                result = this.ExecuteProcess(Path.Combine(this.ExecuteFilePath, MainWindow.CommandProcessName), "/GetActiveSchemeText");
+            });
+
+            // 実行結果が異常な場合は、エラーメッセージを表示して終了する
             if (result.Item1 != 0)
             {
                 MessageBox.Show($"現在の状態を取得することができません.\n\n{result.Item2}", this.Title, MessageBoxButton.OK, MessageBoxImage.Error);
@@ -130,7 +138,7 @@ namespace PowerSchemeUtility
         /// <param name="e">イベント内容</param>
         private void onCloseButtonClick(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            this.Close();
         }
 
         /// <summary>
