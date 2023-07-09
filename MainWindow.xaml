@@ -79,19 +79,19 @@
             <Button x:Name="buttonSelectBetterBatteryLife" Width="120" Margin="5" Foreground="White" Template="{StaticResource buttonNormalTemplate}" Click="onSchemeButtonClick">
                 <StackPanel HorizontalAlignment="Right" Orientation="Vertical">
                     <Image Width="64" Source="pack://application:,,,/PowerSchemeUtility;component/assets/icon_pig.png"/>
-                    <TextBlock FontSize="12" Margin="5" Text="より良いバッテリ"/>
+                    <TextBlock FontSize="12" Margin="5" TextAlignment="Center" Text="より良いバッテリ&#xa;トップクラスの電力効率"/>
                 </StackPanel>
             </Button>
             <Button x:Name="buttonSelectBetterBalance" Width="120" Margin="5" Foreground="White" Template="{StaticResource buttonNormalTemplate}" Click="onSchemeButtonClick">
                 <StackPanel HorizontalAlignment="Right" Orientation="Vertical">
                     <Image Width="64" Source="pack://application:,,,/PowerSchemeUtility;component/assets/icon_leaf.png"/>
-                    <TextBlock FontSize="12" Margin="5" Text="高パフォーマンス"/>
+                    <TextBlock FontSize="12" Margin="5" TextAlignment="Center" Text="高パフォーマンス&#xa;バランス"/>
                 </StackPanel>
             </Button>
             <Button x:Name="buttonSelectMaxPerformance" Width="120" Margin="5" Foreground="White" Template="{StaticResource buttonNormalTemplate}" Click="onSchemeButtonClick">
                 <StackPanel HorizontalAlignment="Right" Orientation="Vertical">
                     <Image Width="64" Source="pack://application:,,,/PowerSchemeUtility;component/assets/icon_power.png"/>
-                    <TextBlock FontSize="12" Margin="5" Text="最も高いパフォーマンス"/>
+                    <TextBlock FontSize="12" Margin="5" TextAlignment="Center" Text="最も高いパフォーマンス&#xa;最適なパフォーマンス"/>
                 </StackPanel>
             </Button>
         </StackPanel>

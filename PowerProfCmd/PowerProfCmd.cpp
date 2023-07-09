@@ -80,9 +80,9 @@ fnPowerSetActiveOverlayScheme g_fnPowerSetActiveOverlayScheme = NULL;
 
 const TCHAR* g_szUnknownSchemeName = _T("パフォーマンス名を取得できません");
 tagPowerSchemeInfo g_PowerSchemeDefinitions[] = {
-	{ GUID_BETTER_BATTERY_LIFE_SCHEME, SCHEME_TYPE_BETTER_BATTERY_LIFE, _T("より良いバッテリー") },
-    { GUID_BALANCED_SCHEME, SCHEME_TYPE_BALANCED, _T("高パフォーマンス") },
-	{ GUID_MAX_PERFORMANCE_SCHEME, SCHEME_TYPE_MAX_PERFORMANCE, _T("最も高いパフォーマンス") },
+	{ GUID_BETTER_BATTERY_LIFE_SCHEME, SCHEME_TYPE_BETTER_BATTERY_LIFE, _T("より良いバッテリー - トップクラスの電力効率") },
+    { GUID_BALANCED_SCHEME, SCHEME_TYPE_BALANCED, _T("高パフォーマンス - バランス") },
+	{ GUID_MAX_PERFORMANCE_SCHEME, SCHEME_TYPE_MAX_PERFORMANCE, _T("最も高いパフォーマンス - 最適なパフォーマンス") },
 };
 
 // ------------------------------------------------------------
