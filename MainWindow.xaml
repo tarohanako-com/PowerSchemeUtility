@@ -10,7 +10,8 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Topmost="True"
-        Title="PowerSchemeUtility">
+        Title="PowerSchemeUtility"
+        Closing="onWindowClosing">
     <Window.Resources>
         <ControlTemplate x:Key="buttonNormalTemplate" TargetType="Button">
             <Border x:Name="Border" Background="MediumPurple" CornerRadius="5" BorderThickness="0">
